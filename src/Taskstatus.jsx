@@ -2,7 +2,6 @@ import { useMediaQuery } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import Balancer from "react-wrap-balancer";
 import { api } from "./global";
 
 function Taskstatus() {
@@ -43,9 +42,10 @@ function Taskstatus() {
               gap: "1rem",
             },
           }}
+          key={task.taskname}
         >
-          <Paper elevation={3}>
-            <span>{task.taskname}</span>
+          <Paper elevation={3} >
+            <span >{task.taskname}</span>
             <span>{task.github}</span>
             <span>{task.frontend}</span>
             <span>{task.backend}</span>

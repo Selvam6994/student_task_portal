@@ -13,7 +13,7 @@ function Dashboard() {
 
   const get_details = async () => {
     const getTaskData = await fetch(
-      `${api}/${sessionStorage.getItem(
+      `${api}/studentdetails/${sessionStorage.getItem(
         "email"
       )}/task`
     );
