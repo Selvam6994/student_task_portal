@@ -1,0 +1,277 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: cursive;
+}
+.loginPage {
+  border: 2px solid green;
+  width: 100%;
+  min-width: 280px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signUpPage {
+  border: 2px solid green;
+  width: 100%;
+  min-width: 280px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.formSection {
+  border: 2px solid green;
+  width: 50%;
+  min-height: 280px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navBar {
+  /* border: 2px solid green; */
+  width: 100%;
+  min-width: 280px;
+  height: 80px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+.optionSection {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0 20px;
+}
+.titleSection {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px 0 0;
+}
+.bodySection {
+  /* background-color: aqua; */
+  height: 100vh;
+  width: 100%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.sideNav {
+  background-color: #6d1b7b74;
+  margin: 80px 0 0 0;
+  /* border: 2px solid green; */
+  position: fixed;
+  height: 100vh;
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.optionsSection {
+  /* border: 2px solid green; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0 0 0;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+}
+.options {
+  transition: 0.75s ease-in;
+  width: 80%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.options:hover {
+  background-color: #6d1b7bc5;
+  color: aliceblue;
+}
+
+.homeSectionBefore {
+  margin: 80px 0 0 300px;
+  height: fit-content;
+  width: fit-content;
+  min-width: 280px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.homeSectionAfter {
+  margin: 80px 0 0 0px;
+
+  height: fit-content;
+  width: 100%;
+  min-width: 280px;
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.displayedTasks {
+  margin: 80px 0 0 0;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 2rem;
+}
+.taskBubble {
+  background-color: #6d1b7bc5;
+  width: 70px;
+  height: 70px;
+  color: aliceblue;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+.taskBubble:hover {
+  background-color: #e91e63;
+}
+
+.taskPageBefore {
+  /* border: 2px solid green; */
+  width: 75%;
+  height: fit-content;
+  margin: 100px 0 0 250px;
+}
+.taskPageAfter {
+  width: 80%;
+  min-width: 280px;
+  height: fit-content;
+  margin: 100px 50px 0 50px;
+}
+
+.taskContent {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.taskSubmission {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+.closeButton {
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.dashBoardPageBefore {
+  /* border: 2px solid green; */
+  margin: 150px 0 0 100px;
+  height: fit-content;
+  width: 100%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.dashBoardPageAfter {
+  margin: 120px 0 0 0px;
+  /* border: 2px solid green; */
+  height: fit-content;
+  width: 100%;
+  min-width: 280px;
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.statusDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  height: fit-content;
+  min-height: 80px;
+  align-items: center;
+  max-width: 100%;
+  min-width: 280px;
+}
+.taskStatusPageBefore {
+  /* border: 2px solid green; */
+  margin: 150px 0 0 200px;
+  height: fit-content;
+  width: 80%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.taskStatusPageAfter {
+  margin: 120px 0 0 0px;
+  /* border: 2px solid green; */
+  height: fit-content;
+  width: 100%;
+  min-width: 280px;
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.webCodePageBefore {
+  /* border: 2px solid green; */
+  margin: 150px 0 0 100px;
+  height: fit-content;
+  width: 100%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.webCodePageAfter {
+  margin: 120px 0 0 0px;
+  /* border: 2px solid green; */
+  height: fit-content;
+  width: 100%;
+  min-width: 280px;
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
