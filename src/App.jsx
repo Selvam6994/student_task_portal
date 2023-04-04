@@ -5,7 +5,7 @@ import Home from "./Home";
 import Taskpage from "./Taskpage";
 import Dashboard from "./Dashboard";
 import Taskstatus from "./Taskstatus";
-import Webcode from "./Webcode";
+
 import Portal from "./Portal";
 
 import Loginpage from "./Loginpage";
@@ -32,7 +32,7 @@ function App() {
           <Route path="/portal/:Task" element={<Taskpage />} />
           <Route path="/portal/Dashboard" element={<Dashboard />} />
           <Route path="/portal/Task Status" element={<Taskstatus />} />
-          <Route path="/portal/Web code" element={<Webcode />} />
+         
         </Route>
       </Routes>
     </div>

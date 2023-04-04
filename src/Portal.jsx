@@ -15,9 +15,7 @@ function Portal() {
     {
       name: "Task Status",
     },
-    {
-      name: "Web code",
-    },
+  
   ];
 
   const navWidth = useMediaQuery("(min-width:1135px)");
@@ -51,6 +49,9 @@ function Portal() {
                       <Link to={`/portal/${option.name}`}> {option.name} </Link>
                     </Dropdown.Item>
                   ))}
+                  <Dropdown.Item>
+                      <Link to={"/"}> Log Out </Link>
+                    </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </div>
@@ -75,6 +76,9 @@ function Portal() {
                   <Link to={`/portal/${option.name}`}> {option.name}</Link>
                 </li>
               ))}
+               <li className="options">
+                <Link to={"/"}>Log Out</Link>
+              </li>
             </ul>
           </Paper>
         ) : (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/joy/Box";
 import Input from "@mui/joy/Input";
 import Button from "@mui/joy/Button";
@@ -8,6 +8,9 @@ import * as yup from "yup";
 
 function Loginpage() {
   const navigate = useNavigate();
+  const [wrongPassword, setWrongPassword] = useState(false);
+
+  sessionStorage.clear()
 
   let userSchema = yup.object({
     email: yup.string().email().required("Required"),
@@ -33,6 +36,8 @@ function Loginpage() {
           sessionStorage.setItem("token", result.token);
           sessionStorage.setItem("email", result.email.id);
           navigate("/portal");
+        } else {
+          setWrongPassword(true);
         }
       },
     });
@@ -79,6 +84,11 @@ function Loginpage() {
           />
           {errors.password && touched.password ? (
             <span style={{ color: "red" }}>{errors.password}</span>
+          ) : (
+            ""
+          )}
+          {wrongPassword == true ? (
+            <span style={{ color: "red" }}>Wrong Password</span>
           ) : (
             ""
           )}

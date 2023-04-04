@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/joy/Button";
 import Paper from "@mui/material/Paper";
 import { useMediaQuery } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   const navWidth = useMediaQuery("(min-width:1135px)");
@@ -66,16 +67,10 @@ const pendingTasks = assignedTask.length - taskData.length
           <h3>Submitted Task : {submittedTasks}</h3>
           <h3>Pending Task : {pendingTasks}</h3>
           <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-            <Button variant="outlined">Task Status</Button>
+           <Link to={"/portal/Task Status"}> <Button variant="outlined">Task Status</Button></Link>
           </Box>
         </Paper>
-        <Paper className="statusDisplay" elevation={3}>
-          <h3>Submitted WebCode : </h3>
-          <h3>Pending WebCode : </h3>
-          <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-            <Button variant="outlined">Task Status</Button>
-          </Box>
-        </Paper>
+       
       </Box>
     </div>
   );
