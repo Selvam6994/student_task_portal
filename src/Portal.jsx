@@ -40,17 +40,17 @@ function Portal() {
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
                   <Dropdown.Item>
-                    {" "}
-                    <Link to="/portal">Home </Link>
+                 
+                    <Link  style={{textDecoration:"none"}} to="/portal">Home </Link>
                   </Dropdown.Item>
 
                   {sideNavOptions.map((option) => (
                     <Dropdown.Item key={option.name}>
-                      <Link to={`/portal/${option.name}`}> {option.name} </Link>
+                      <Link style={{textDecoration:"none"}} to={`/portal/${option.name}`}> {option.name} </Link>
                     </Dropdown.Item>
                   ))}
                   <Dropdown.Item>
-                      <Link to={"/"}> Log Out </Link>
+                      <Link style={{textDecoration:"none"}} to={"/"}> Log Out </Link>
                     </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
@@ -69,15 +69,15 @@ function Portal() {
           <Paper elevation={8} className="sideNav">
             <ul className="optionsSection">
               <li className="options">
-                <Link to={"/portal"}>Home</Link>
+                <Link style={{textDecoration:"none"}}  to={"/portal"}>Home</Link>
               </li>
               {sideNavOptions.map((option) => (
                 <li className="options" key={option.name}>
-                  <Link to={`/portal/${option.name}`}> {option.name}</Link>
+                  <Link style={{textDecoration:"none"}}  to={`/portal/${option.name}`}> {option.name}</Link>
                 </li>
               ))}
                <li className="options">
-                <Link to={"/"}>Log Out</Link>
+                <Link style={{textDecoration:"none"}}  to={"/"}>Log Out</Link>
               </li>
             </ul>
           </Paper>

@@ -43,7 +43,7 @@ function Loginpage() {
     });
 
   //   console.log(values.password);
-  console.log(errors);
+  // console.log(errors);
   return (
     <div className="loginPage">
       <form onSubmit={handleSubmit} className="formSection">
@@ -103,7 +103,7 @@ function Loginpage() {
             <Button type="submit" variant="plain">
               Login
             </Button>
-            <Link to="/signup">
+            <Link style={{textDecoration:"none"}} to="/signup">
               <Button variant="plain">New student?</Button>
             </Link>
           </Box>

@@ -15,12 +15,12 @@ function Taskstatus() {
     );
     const result = await getTaskData.json();
     setTaskStatus(result);
-    console.log(result);
+    // console.log(result);
   };
   useEffect(() => {
     get_details();
   }, []);
-  console.log(taskStatus);
+  // console.log(taskStatus);
   return (
     <div
       className={

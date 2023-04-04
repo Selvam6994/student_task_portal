@@ -40,9 +40,9 @@ function Signuppage() {
       }
     },
   });
-  console.log(formik_signup.values.password);
-  console.log(formik_signup.errors.password);
-  console.log(email);
+  // console.log(formik_signup.values.password);
+  // console.log(formik_signup.errors.password);
+  // console.log(email);
   return (
     <div className="signUpPage">
       <form className="formSection" onSubmit={formik_signup.handleSubmit}>

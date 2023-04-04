@@ -30,7 +30,7 @@ function Home() {
       <div className="displayedTasks">
         {taskAsigned.map((task) => (
           <div className="taskBubble" key={task.name}>
-            <Link to={`/portal/${task.name}`}> {task.name}</Link>
+            <Link style={{textDecoration:"none"}} to={`/portal/${task.name}`}> {task.name}</Link>
           </div>
         ))}
       </div>

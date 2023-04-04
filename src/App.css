@@ -5,6 +5,7 @@
 }
 .loginPage {
   border: 2px solid green;
+
   width: 100%;
   min-width: 280px;
   height: 100vh;
@@ -24,8 +25,9 @@
   flex-direction: column;
 }
 .formSection {
-  border: 2px solid green;
-  width: 50%;
+ 
+  background-color: #6d1b7b9e;
+  width: 100%;
   min-height: 280px;
   height: fit-content;
   display: flex;

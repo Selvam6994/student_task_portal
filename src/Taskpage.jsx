@@ -49,9 +49,7 @@ function Taskpage() {
       }
     },
   });
-  console.log(formik_task.values.github);
-  console.log(formik_task.values.frontend);
-  console.log(formik_task.values.backend);
+
   const navWidth = useMediaQuery("(min-width:1135px)");
 
   const task = async () => {
@@ -69,7 +67,7 @@ function Taskpage() {
     task();
   }, []);
 
-  console.log(sessionStorage.getItem("email"));
+  // console.log(sessionStorage.getItem("email"));
 
   return (
     <div className={navWidth == true ? "taskPageBefore" : "taskPageAfter"}>
@@ -87,7 +85,7 @@ function Taskpage() {
           <Paper elevation={3}>
             <div className="closeButton">
               <IconButton aria-label="back" size="large">
-                <Link to={"/portal"}>
+                <Link style={{textDecoration:"none"}} to={"/portal"}>
                   <ArrowBackIcon fontSize="inherit" style={{ color: "red" }} />
                 </Link>
               </IconButton>

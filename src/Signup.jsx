@@ -59,7 +59,7 @@ function Signup() {
       }
     },
   });
-console.log(formik_mail.values.email)
+// console.log(formik_mail.values.email)
 
 
   return (

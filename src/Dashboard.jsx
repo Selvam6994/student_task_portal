@@ -18,7 +18,7 @@ function Dashboard() {
     );
     const result = await getTaskData.json();
     setTaskData(result);
-    console.log(result);
+    // console.log(result);
   };
 
   const assigned_details = async () => {
@@ -30,7 +30,7 @@ function Dashboard() {
     });
     const tasks = await getTasks.json();
     getAssignedTask(tasks);
-    console.log(tasks);
+    // console.log(tasks);
   };
 
   useEffect(() => {
@@ -38,8 +38,8 @@ function Dashboard() {
     assigned_details();
   }, []);
 
-  console.log(taskData.length)
-  console.log(assignedTask.length)
+  // console.log(taskData.length)
+  // console.log(assignedTask.length)
 const totalTasks = assignedTask.length;
 const submittedTasks = taskData.length;
 const pendingTasks = assignedTask.length - taskData.length
@@ -67,7 +67,7 @@ const pendingTasks = assignedTask.length - taskData.length
           <h3>Submitted Task : {submittedTasks}</h3>
           <h3>Pending Task : {pendingTasks}</h3>
           <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-           <Link to={"/portal/Task Status"}> <Button variant="outlined">Task Status</Button></Link>
+           <Link style={{textDecoration:"none"}} to={"/portal/Task Status"}> <Button variant="outlined">Task Status</Button></Link>
           </Box>
         </Paper>
        
