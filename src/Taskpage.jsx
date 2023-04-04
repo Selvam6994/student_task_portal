@@ -10,6 +10,7 @@ import Balancer from "react-wrap-balancer";
 import Input from "@mui/joy/Input";
 import Button from "@mui/joy/Button";
 import { useFormik } from "formik";
+import { api } from "./global";
 
 function Taskpage() {
   const [taskAsigned, setAsignedTask] = useState([]);
@@ -33,7 +34,7 @@ function Taskpage() {
 
     onSubmit: async (values) => {
       const submitTask = await fetch(
-        `http://localhost:4000/studentdetails/${sessionStorage.getItem(
+        `${api}/studentdetails/${sessionStorage.getItem(
           "email"
         )}/${taskDescription.Task}`,
         {
@@ -53,7 +54,7 @@ function Taskpage() {
   const navWidth = useMediaQuery("(min-width:1135px)");
 
   const task = async () => {
-    const getData = await fetch("http://localhost:4000/", {
+    const getData = await fetch(`${api}`, {
       method: "GET",
       headers: {
         "x-auth-token": sessionStorage.getItem("token"),

@@ -4,6 +4,7 @@ import Button from "@mui/joy/Button";
 import Paper from "@mui/material/Paper";
 import { useMediaQuery } from "@mui/material";
 import { Link } from "react-router-dom";
+import { api } from "./global";
 
 function Dashboard() {
   const navWidth = useMediaQuery("(min-width:1135px)");
@@ -12,7 +13,7 @@ function Dashboard() {
 
   const get_details = async () => {
     const getTaskData = await fetch(
-      `http://localhost:4000/studentdetails/${sessionStorage.getItem(
+      `${api}/${sessionStorage.getItem(
         "email"
       )}/task`
     );
@@ -22,7 +23,7 @@ function Dashboard() {
   };
 
   const assigned_details = async () => {
-    const getTasks = await fetch("http://localhost:4000/", {
+    const getTasks = await fetch(`${api}`, {
       method: "GET",
       headers: {
         "x-auth-token": sessionStorage.getItem("token"),

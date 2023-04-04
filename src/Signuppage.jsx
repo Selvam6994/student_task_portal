@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Button from "@mui/joy/Button";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import { api } from "./global";
 
 function Signuppage() {
   const { email } = useParams();
@@ -27,7 +28,7 @@ function Signuppage() {
     },
     validationSchema: userSchema,
     onSubmit: async (values) => {
-      const sendData = await fetch("http://localhost:4000/logindetails", {
+      const sendData = await fetch( `${api}/logindetails`, {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(values),

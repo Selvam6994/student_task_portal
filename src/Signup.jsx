@@ -5,6 +5,7 @@ import Button from "@mui/joy/Button";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
+import { api } from "./global";
 
 function Signup() {
   const [otpField, setOtpField] = useState(false);
@@ -23,7 +24,7 @@ function Signup() {
       },
       validationSchema: userSchema,
       onSubmit: async (values) => {
-        const postData = await fetch("http://localhost:4000/signupdetails", {
+        const postData = await fetch(`${api}/signupdetails`, {
           method: "POST",
           headers: {
             "Content-type": "application/json",
@@ -45,7 +46,7 @@ function Signup() {
     
     },
     onSubmit: async (values) => {
-      const get_otp = await fetch("http://localhost:4000/verifyOTP", {
+      const get_otp = await fetch(`${api}/verifyOTP`, {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(values),

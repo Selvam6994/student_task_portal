@@ -2,6 +2,7 @@ import React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { api } from "./global";
 
 function Home() {
   // const [taskPage, setTaskPage] = useState(false);
@@ -9,7 +10,7 @@ function Home() {
   const [taskAsigned, setAsignedTask] = useState([]);
 
   const task = async () => {
-    const getData = await fetch("http://localhost:4000/", {
+    const getData = await fetch(`${api}`, {
       method: "GET",
       headers: {
         "x-auth-token": sessionStorage.getItem("token"),

@@ -3,13 +3,14 @@ import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Balancer from "react-wrap-balancer";
+import { api } from "./global";
 
 function Taskstatus() {
   const navWidth = useMediaQuery("(min-width:1135px)");
   const [taskStatus, setTaskStatus] = useState([]);
   const get_details = async () => {
     const getTaskData = await fetch(
-      `http://localhost:4000/studentdetails/${sessionStorage.getItem(
+      `${api}/studentdetails/${sessionStorage.getItem(
         "email"
       )}/task`
     );
