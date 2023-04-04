@@ -47,6 +47,7 @@ function Loginpage() {
   // console.log(errors);
   return (
     <div className="loginPage">
+     
       <form onSubmit={handleSubmit} className="formSection">
         <Box
           sx={{
@@ -57,6 +58,8 @@ function Loginpage() {
             flexWrap: "wrap",
           }}
         >
+          <h2>Task Submission Portal</h2>
+          <h3>Log in here...</h3>
           <span>Email</span>
           <Input
             className="errorIndiction"

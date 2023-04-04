@@ -75,6 +75,8 @@ function Signup() {
             flexWrap: "wrap",
           }}
         >
+          <h2>Task Submission Portal</h2>
+          <h3>Email verification</h3>
           <span>Name</span>
           <Input
             placeholder="Name"
