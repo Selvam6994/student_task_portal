@@ -110,7 +110,7 @@ function Signup() {
               flexDirection: "row",
             }}
           >
-            <Button variant="plain" type="submit">
+            <Button variant="plain" type="submit" style={{color:"orange",background:"white"}}>
               Send OTP
             </Button>
             {formState == true ? <span style={{color:"red"}}>Invalid Credentials</span> : ""}
@@ -144,7 +144,7 @@ function Signup() {
                 flexDirection: "row",
               }}
             >
-              <Button variant="plain" type="submit">
+              <Button variant="plain" type="submit" style={{color:"white",background:"orange"}}>
                 Verify
               </Button>
               <span style={{color:"red"}}>{errorMessage}</span>

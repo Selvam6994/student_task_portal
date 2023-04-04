@@ -25,9 +25,10 @@
   flex-direction: column;
 }
 .formSection {
- 
-  background-color: #6d1b7b9e;
-  width: 100%;
+  border: 2px solid green;
+  background-color: #6d1b7bc1;
+  border-radius: 50px;
+  width: 50%;
   min-height: 280px;
   height: fit-content;
   display: flex;

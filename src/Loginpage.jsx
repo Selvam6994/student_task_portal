@@ -100,11 +100,11 @@ function Loginpage() {
               flexDirection: "row",
             }}
           >
-            <Button type="submit" variant="plain">
+            <Button type="submit" variant="plain" style={{color:"white",background:"orange"}}>
               Login
             </Button>
             <Link style={{textDecoration:"none"}} to="/signup">
-              <Button variant="plain">New student?</Button>
+              <Button variant="plain" style={{color:"orange",background:"white"}}>New student?</Button>
             </Link>
           </Box>
         </Box>
